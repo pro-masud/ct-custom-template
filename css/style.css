@@ -60,15 +60,15 @@ button {
     text-transform: uppercase;
     color: #be3600;
     font-family: "Bebas Neue", sans-serif;
-    font-weight: 700;
 }
 
 .header-top-left p a{
     font-size: 15px;
     line-height: 19px;
     text-transform: uppercase;
-    color: #be3600;
+    color: #fff;
     font-family: "Bebas Neue", sans-serif;
+    font-weight: normal;
 }
 
 .header-top-right .header-form button{
@@ -87,4 +87,82 @@ button {
 /************************
 * Header Start
 *************************/
+header{
+    height: 109px;
+    background-color: rgb(237, 237, 237, 0.8);
+}
+
+header .header-row{
+    align-items: center;
+    justify-content: space-between;
+}
+.header-left .logo{
+    width: 170px;
+    height: 41px;
+}
+.header-left .logo img{
+    width: 100%;
+}
+.header-right .main-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-right .main-menu li{
+    position: relative;
+}
+.header-right .main-menu li a{
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #333333;
+    font-family: "Myriad Pro";
+    padding: 10px 0;
+    position: relative;
+    transition: .5s;
+    font-weight: 600;
+    margin: 0 25px;
+
+}
+.header-right .main-menu li a.active{
+    font-weight: 700;
+}
+
+.header-right .main-menu li a.active:before {
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 98, 0);
+    position: absolute;
+    bottom: -7px;
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.header-right .main-menu li a:after {
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 98, 0);
+    position: absolute;
+    bottom: -7px;
+    opacity: 0;
+    transition: opacity 300ms;
+}
+.header-right .main-menu li a:hover:before,
+.header-right .main-menu li a:hover:after {
+  opacity: 1;
+}
+
+.header-right .main-menu li .sub-menu{
+    position: absolute;
+    top: 45px;
+    left: -24px;
+    background-color: #fff;
+    padding: 20px;
+    width: 160px;
+    border: 1px solid rgba(0,1,1,0.38);
+    border-radius: 3px;
+}
 

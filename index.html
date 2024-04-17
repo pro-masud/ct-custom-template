@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CT Custom</title>
+    <link rel="shortcut icon" href="./image/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/responvie.css">
 </head>
@@ -13,7 +14,7 @@
         <div class="container">
             <div class="row header-row">
                 <div class="header-top-left">
-                    <p>CALL US NOW! <a type="tel" href="tel:+880743259489">+880743259489</a></p>
+                    <p>CALL US NOW! <a type="tel" href="tel:+880743259489"> +880743259489</a></p>
                 </div>
                 <div class="header-top-right">
                     <div class="header-form">
@@ -35,21 +36,57 @@
                     </div>
                 </div>
                 <div class="header-right">
-                    <div class="main-menu">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Price</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                        </ul>
-                    </div>
+                    <ul class="main-menu">
+                        <li><a href="#">Title 1</a></li>
+                        <li>
+                            <a href="#">Title 2</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Title 1</a></li>
+                                <li><a href="#">Title 2</a></li>
+                                <li><a href="#">Title 3</a></li>
+                                <li><a href="#">Title 4</a></li>
+                                <li><a href="#">Title 5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Title 3</a></li>
+                        <li><a href="#">Title 4</a></li>
+                        <li><a href="#">Title 5</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </header>
     <!-- Header Section end -->
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+        var previousClickedElement = null;
+
+        $('.main-menu li a').on("click", function(event) {
+            // Check if the clicked element is not within ".main-menu li a"
+            if (!$(event.target).closest(".main-menu li a").length) {
+                // Remove the "active" class from the previously clicked element
+                if (previousClickedElement !== null) {
+                    previousClickedElement.removeClass("active");
+                }
+            }
+        });
+
+        $(".main-menu li a").click(function(){
+            // Remove the "active" class from the previously clicked element
+            if (previousClickedElement !== null && !$(this).is(previousClickedElement)) {
+                previousClickedElement.removeClass("active");
+            }
+
+            // Toggle the "active" class for the clicked element
+            $(this).toggleClass("active");
+
+            // Update the previously clicked element
+            previousClickedElement = $(this);
+        });
+
+
+        
+    </script>
 </body>
 </html>
