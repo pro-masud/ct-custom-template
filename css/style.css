@@ -110,7 +110,8 @@ header .header-row{
 }
 .header-right .main-menu > li{
     position: relative;
-    padding: 10px 0;
+    padding: 13px 0;
+    overflow: hidden;
 }
 .header-right .main-menu li > a{
     font-size: 16px;
@@ -120,25 +121,26 @@ header .header-row{
     transition: .5s;
     font-weight: 600;
     margin: 0 25px;
+    padding: 30px 0;
 }
 .header-right .main-menu > li.active:before {
     content: "";
-    left: 0;
-    width: 100%;
+    position: absolute;
+    left: 17px;
+    width: 70%;
     height: 4px;
     background: rgba(255, 98, 0);
-    position: absolute;
     bottom: 0px;
     opacity: 1;
     transition: opacity 300ms;
 }
 .header-right .main-menu > li:after {
     content: "";
-    left: 0;
-    width: 100%;
+    position: absolute;
+    left: 17px;
+    width: 70%;
     height: 4px;
     background: rgba(255, 98, 0);
-    position: absolute;
     bottom: 0px;
     opacity: 0;
     transition: opacity 300ms;
@@ -149,18 +151,24 @@ header .header-row{
 }
 .header-right .main-menu li .sub-menu{
     position: absolute;
-    top: 45px;
+    top: 60px;
     left: -24px;
-    padding: 10px 0;
+    padding: 15px 0;
     background-color: #fff;
     width: 160px;
     border: 1px solid rgba(0,1,1,0.38);
     border-radius: 3px;
     opacity: 0;
-    height:auto;
+    height: auto;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     transition: all 0.5s ease;
+}
+.header-right .main-menu li:hover, .header-right .main-menu li.active{
+    overflow: visible;
+}
+.header-right .main-menu li:hover > .sub-menu, .header-right .main-menu li.active > .sub-menu{
+    opacity: 1;
 }
 .header-right .main-menu li .sub-menu li{
     text-align: center;
@@ -171,12 +179,13 @@ header .header-row{
     width: 100%;
     display: inline-block;
     padding: 5px 0;
-    color: #333;
+    color: #454545;
     font-weight: 600;
+}
+.header-right .main-menu li .sub-menu li a:hover{
+    color: #363535;
 }
 .header-right .main-menu li .sub-menu li a::after{
     display: none;
 }
-.header-right .main-menu li:hover .sub-menu, .header-right .main-menu li.active .sub-menu{
-    opacity: 1;
-}
+
