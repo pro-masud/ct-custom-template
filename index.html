@@ -62,9 +62,9 @@
     <script>
         var previousClickedElement = null;
 
-        $('.main-menu li a').on("click", function(event) {
+        $('.main-menu li').on("click", function(event) {
             // Check if the clicked element is not within ".main-menu li a"
-            if (!$(event.target).closest(".main-menu li a").length) {
+            if (!$(event.target).closest(".main-menu li").length) {
                 // Remove the "active" class from the previously clicked element
                 if (previousClickedElement !== null) {
                     previousClickedElement.removeClass("active");
@@ -72,7 +72,7 @@
             }
         });
 
-        $(".main-menu li a").click(function(){
+        $(".main-menu li").click(function(){
             // Remove the "active" class from the previously clicked element
             if (previousClickedElement !== null && !$(this).is(previousClickedElement)) {
                 previousClickedElement.removeClass("active");
@@ -84,9 +84,6 @@
             // Update the previously clicked element
             previousClickedElement = $(this);
         });
-
-
-        
     </script>
 </body>
 </html>
