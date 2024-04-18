@@ -2,6 +2,9 @@
     .breadcrumb{
         padding: 40px 0;
     }
+    .heading p{
+        width: 100%;;
+    }
 }
 @media screen and (max-width: 768px) {
     .header-right .main-menu > li {
@@ -11,13 +14,22 @@
         font-size: 14px;
         padding: 20px 0;
     }
+    .ct-contact-wrap .contact-f-right{
+        padding-left: 40px;
+    }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 540px) {
+    .container{
+        width: 90%;
+    }
     .header-top{
         display: none;
     }
     .header-right .main-menu{
         display: none;
+    }
+    .breadcrumb {
+        padding: 30px 0 10px;
     }
     .slicknav_menu{
         display: block;
@@ -29,8 +41,22 @@
         align-items: center;
         justify-content: center;
     }
-    .breadcrumb{
-        padding: 30px 0;
+    .ct-contact-form{
+        padding: 40px 0;
+    }
+    .ct-contact-wrap {
+        flex-direction: column;
+    }
+    .ct-contact-wrap .contact-f-left{
+        width: 100%;
+    }
+    .ct-contact-wrap .contact-f-right{
+        padding-left: 0;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .ct-contact-wrap .contact-f-right .ct-social-media ul{
+        margin-top: 40px;
     }
 }
 @media screen and (max-width: 375px) {
