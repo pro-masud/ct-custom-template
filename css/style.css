@@ -2,6 +2,7 @@
 * Basic Setup Start
 *************************/
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 *{
     margin: 0px;
     padding: 0px;
@@ -10,7 +11,7 @@
 a{
     text-decoration: none;
 }
-ul{
+ul,ol{
     list-style: none;
     padding: 0px;
 }
@@ -155,7 +156,7 @@ header .header-row{
 .header-right .main-menu li .sub-menu{
     position: absolute;
     top: 60px;
-    left: -24px;
+    left: -45px;
     padding: 15px 0;
     background-color: #fff;
     width: 160px;
@@ -202,4 +203,50 @@ header .header-row{
     top: 0px;
     left: 100%;
 }
+/************************
+* Breadcrumb Top Start
+*************************/
+.breadcrumb{
+    padding: 50px 0;
+}
 
+.breadcrumb .breadcrumb-main {
+    display: flex;
+    align-items: center;
+}
+.breadcrumb .breadcrumb-main li a{
+    font-size: 14px;
+    line-height: 25px;
+    color: #929292;
+    font-weight: 400;
+    font-family: "Ubuntu";
+    margin: 0 3px;
+    font-weight: 400;
+}
+.breadcrumb .breadcrumb-main li{
+    font-size: 14px;
+    line-height: 25px;
+    color: #929292;
+    font-weight: 400;
+    font-family: "Ubuntu";
+    margin: 0 3px;
+    font-weight: 700;
+}
+
+.heading h1{
+    font-size: 27px;
+    line-height: 40px;
+    color: #ff6200;
+    font-weight: 700;
+    font-family: "Open Sans";
+}
+
+.heading p{
+    font-size: 14px;
+    letter-spacing: 0px;
+    line-height: 19px;
+    color: #878787;
+    font-weight: 300;
+    font-family: "Ubuntu";
+    width: 80%;
+}
