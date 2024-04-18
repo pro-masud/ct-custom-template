@@ -1,0 +1,26 @@
+@media screen and (max-width: 1024px) {
+   
+}
+@media screen and (max-width: 768px) {
+    .header-right .main-menu > li {
+        margin: 0px 14px;
+    }
+    .header-right .main-menu li > a {
+        font-size: 14px;
+        padding: 20px 0;
+    }
+}
+@media screen and (max-width: 425px) {
+    .header-right .main-menu{
+        display: none;
+    }
+    .slicknav_menu{
+        display: block;
+    }
+}
+@media screen and (max-width: 375px) {
+   
+}
+@media screen and (max-width: 320px) {
+   
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CT Custom</title>
     <link rel="shortcut icon" href="./image/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/slicknav.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/responvie.css">
 </head>
@@ -42,10 +43,28 @@
                             <a href="#">Title 2</a>
                             <ul class="sub-menu">
                                 <li><a href="#">Title 1</a></li>
-                                <li><a href="#">Title 2</a></li>
+                                <li>
+                                    <a href="#">Title 2</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Title 1</a></li>
+                                        <li><a href="#">Title 2</a></li>
+                                        <li><a href="#">Title 3</a></li>
+                                        <li><a href="#">Title 4</a></li>
+                                        <li><a href="#">Title 5</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="#">Title 3</a></li>
                                 <li><a href="#">Title 4</a></li>
-                                <li><a href="#">Title 5</a></li>
+                                <li>
+                                    <a href="#">Title 5</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Title 1</a></li>
+                                        <li><a href="#">Title 2</a></li>
+                                        <li><a href="#">Title 3</a></li>
+                                        <li><a href="#">Title 4</a></li>
+                                        <li><a href="#">Title 5</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
                         <li><a href="#">Title 3</a></li>
@@ -58,6 +77,7 @@
     </header>
     <!-- Header Section end -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/jquery.slicknav.min.js"></script>
     <script src="./js/main.js"></script>
     <script>
         var previousClickedElement = null;
@@ -84,6 +104,9 @@
             // Update the previously clicked element
             previousClickedElement = $(this);
         });
+
+        // slicknav activation class
+        $('.main-menu').slicknav();
     </script>
 </body>
 </html>
