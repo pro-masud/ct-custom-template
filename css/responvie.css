@@ -11,11 +11,21 @@
     }
 }
 @media screen and (max-width: 425px) {
+    .header-top{
+        display: none;
+    }
     .header-right .main-menu{
         display: none;
     }
     .slicknav_menu{
         display: block;
+    }
+    .header-left {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 @media screen and (max-width: 375px) {

@@ -177,6 +177,10 @@ header .header-row{
     text-align: center;
     margin: 2px 0;
     position: relative;
+    overflow: hidden;
+}
+.header-right .main-menu li .sub-menu li:hover{
+    overflow: visible;
 }
 .header-right .main-menu li .sub-menu li a{
     margin: 0px;
